@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Bro - Prograь</title>
+    <link href="font.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bebas+Neue&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="programs.css">
+    <link rel="icon" href="jpg/favicon.PNG">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-text">
+                <div>
+                    <h1>
+                        <a href="home.html" style="color: #f1ecec; text-decoration: none;">
+                        GYM<span class="colortext"> BRO</span>
+                        </a>
+                    </h1>
+                </div> 
+            </ul>
+            <ul class="nav-links"> 
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="programs.html">PROGRAMS</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="profile.html">PROFILE</a></li>   
+            </ul>
+        </nav>
+    </header>
+    <div class="text">
+        <h1>PROGRAMS </h1>
+    </div>
+    <ul class="section-image">
+        <img src="jpg/favicon.PNG">
+        </ul>
+        <section>
+            <div class="cont">
+                <div class="contein">
+                    <div class="textt">
+                        <form>
+                            <div class="column">
+                                <label for="goal">Workout Goal:</label>
+                                <select id="goal">
+                                    <option value="похудение">Weight Loss</option>
+                                    <option value="набор мышечной массы">Muscle Gain</option>
+                                    <option value="улучшение выносливости">Endurance Improvement</option>
+                                    <!-- Add other options -->
+                                </select>
+                        
+                                <label for="level">Fitness Level:</label>
+                                <select id="level">
+                                    <option value="начинающий">Beginner</option>
+                                    <option value="средний">Intermediate</option>
+                                    <option value="продвинутый">Advanced</option>
+                                </select>
+                        
+                                <label for="height">Height:</label>
+                                <input type="number" id="height" placeholder="Your height in cm" required>
+                        
+                                <label for="weight">Weight:</label>
+                                <input type="number" id="weight" placeholder="Your weight in kg" required>
+                            </div>
+                        
+                            <div class="column">
+                                <label for="age">Age:</label>
+                                <input type="number" id="age" placeholder="Your age" required>
+                        
+                                <label for="gender">Gender:</label>
+                                <select id="gender">
+                                    <option value="мужской">Male</option>
+                                    <option value="женский">Female</option>
+                                </select>
+                                
+                                <label for="equipment">Available Equipment:</label>
+                                <input type="text" id="equipment" placeholder="For example, dumbbells, barbells" required>
+                        
+                                <label for="time">Time for Workouts:</label>
+                                <input type="text" id="time" placeholder="For example, 3 times a week" required>
+                            </div>  
+                        </form>
+                    </div>      
+                </div>
+                <button type="button" id="submitButton">Submit</button>
+                <div class="conteiner">
+                    <h2>Workout Program</h2>
+                    <div id="workoutProgram">Your workout program will be displayed here.</div>
+                </div>
+            </div>
+        </section>
+        
+
+<script src="script.js"></script>
+<footer>
+    <p>&copy; 2024 Your Gym Bro. All rights reserved.</p>
+</footer>
+</body>
+</html>

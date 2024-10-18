@@ -1,0 +1,391 @@
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Меняем направление навигации на вертикальное */
+        align-items: flex-start; /* Выровнять элементы по левому краю */
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .text {
+        font-size: 40px; /* Уменьшаем размер шрифта для текста */
+    }
+
+    .btn {
+        padding: 15px 50px; /* Уменьшаем размер кнопок */
+    }
+
+    .container {
+        flex-direction: column; /* Вертикальное расположение карточек */
+    }
+
+    .call-to-action {
+        flex-direction: column; /* Вертикальное расположение колонок */
+        text-align: center; /* Центрирование текста на мобильных устройствах */
+        padding: 10px;
+    }
+
+    .call-to-action h2 {
+        font-size: 24px; /* Уменьшаем размер заголовка */
+    }
+
+    .call-to-action .cta-btn {
+        margin-top: 20px; /* Меньший отступ для кнопки */
+    }
+
+    footer {
+        font-size: 14px; /* Уменьшаем размер текста футера */
+    }
+}
+
+/* Для экранов до 480px (очень маленькие экраны) */
+@media (max-width: 480px) {
+    .text {
+        font-size: 30px; /* Еще меньше шрифт для мобильных */
+    }
+
+    .btn {
+        padding: 10px 30px; /* Уменьшаем кнопки еще больше */
+    }
+
+    .call-to-action h2 {
+        font-size: 20px; /* Заголовок еще меньше */
+    }
+
+    .call-to-action p {
+        font-size: 16px;
+    }
+}
+
+/* Общие стили для всего сайта */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #111111;
+}
+
+/* Навигация */
+nav {
+    background-color: #111111;
+    padding: 10px;
+    font: 1.2rem "Robot", sans-serif;
+    text-align: right;
+    background: #111111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Панель навигации будет занимать всю ширину страницы */
+    background-color: #111111;/* Цвет фона */
+    z-index: 1000; /* Убедитесь, что панель всегда поверх других элементов */
+    padding: 10px;   
+}
+
+.nav-text h1 {
+    color: #f1ecec;
+    font: 1.2rem "Nitro", sans-serif;
+    margin: 0;    
+    font-size: 28px;
+}
+
+.colortext { 
+    color: rgb(17, 133, 148);
+}
+
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    margin-right: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;  
+    position: relative;
+}
+
+.nav-links a:hover {    
+    /*text-decoration: underline;*/
+    color: #00fff0; /* Яркий неоновый цвет */
+   text-shadow: 0 0 20px #00fff0, 0 0 30px #00fff0, 0 0 40px #00fff0; /* Усиливаем свечение */
+}
+
+.nav-links a::after {
+    content: '';
+    bottom: -10px;
+    height: 0px;
+    width: 10px;
+    left: 50%;
+    position: absolute;
+    background-color: #01fefe;
+    border-radius: 50%;
+    transition: all 300ms;
+}
+
+.nav-links a:hover::after {
+    height: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text {
+    color: rgb(17, 133, 148);
+    font-size: 28px;
+    font-family: 'Nitro', sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: -150px;
+    
+}
+
+
+
+.section-image img {
+    width: 100px;  /* Установите нужную ширину */
+    height: auto; /* Высота будет пропорциональна */
+    margin-top: 200px;
+    display: flex;
+    margin-left: 705px;    
+    margin-bottom: -320px;
+    z-index: 1; /* Контейнер уходит "под" первый контейнер */
+
+}
+
+
+.cont {
+    width: 90%;
+    height: 900px;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    margin-top: 200px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.6); /* Яркое белое неоновое свечение */
+
+    margin-bottom: 70px;
+    display: flex; /* Используем Flexbox для размещения блоков по горизонтали */
+    justify-content: space-between; /* Распределяем блоки с пространством между ними */
+    align-items: flex-start; /* Выравниваем блоки по верху */
+}
+
+.contein {
+    width: 40%; /* Ширина каждого блока, чтобы они умещались по горизонтали */
+    height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #cacaca;
+    box-shadow: 0 60px 90px rgba(0, 0, 0, 0.9); /* Тень вокруг блока */
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+
+/* Стили для текста и других элементов */
+.textt {
+    color: #111111;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 550px; 
+    margin-left: auto;
+    margin-right: auto;
+    
+    z-index: 1;
+}
+
+body form {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+    color: #000000;
+    margin: 0;
+    padding: 20px;
+    margin-top: 550px;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    max-width: 600px;
+    margin: auto;
+    display: flex; /* Используем flexbox для создания колонок */
+    flex-wrap: wrap; /* Разрешаем перенос элементов на следующую строку */
+}
+
+.column {
+    flex: 1 1 50%; /* Каждая колонка занимает 50% ширины */
+    padding: 10px; /* Отступы внутри колонки */
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input[type="number"],
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: border-color 0.8s;
+    font-size: 14px;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    margin-top: 830px; /* Отступ сверху для кнопки */
+    padding: 20px 100px; /* Внутренние отступы */
+    background-color: rgb(17, 133, 148); /* Цвет кнопки */
+    color: #ffffff; /* Цвет текста на кнопке */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.conteiner {
+    width: 40%; /* Ширина каждого блока, чтобы они умещались по горизонтали */
+    height: 700px;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif; /* Шрифт для заголовка */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #cacaca;
+    box-shadow: 0 60px 90px rgba(0, 0, 0, 0.9); /* Тень вокруг блока */
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: center; /* Центрирование содержимого по горизонтали */
+    z-index: 1;
+}
+
+/* Стили для заголовка в контейнере */
+.container h2 {
+    font-family: 'Agdasima', sans-serif; /* Шрифт для заголовка */
+    color: #007BFF; /* Цвет заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
+    text-align: center; /* Центрирование текста */
+    width: 100%; /* Заголовок занимает всю ширину контейнера */
+}
+
+/* Стили для формы */
+.column {
+    display: flex; /* Используем флекс для выравнивания */
+    flex-direction: column; /* Вертикальное выравнивание */
+    margin-bottom: 15px; /* Отступ между колонками */
+}
+
+/* Стили для меток и инпутов */
+label {
+    font-family: 'Montserrat', sans-serif; /* Шрифт для меток */
+    margin-bottom: 5px; /* Отступ снизу */
+}
+
+input, select {
+    padding: 10px; /* Внутренние отступы для инпутов */
+    border: 1px solid #ccc; /* Рамка для инпутов */
+    border-radius: 5px; /* Скругленные углы */
+    font-family: 'Montserrat', sans-serif; /* Шрифт для инпутов */
+}
+
+/* Стили для кнопки */
+button {
+    background-color: #007BFF;/* Цвет кнопки */
+    color: #ffffff; /* Цвет текста на кнопке */
+    border: none; /* Без рамки */
+    padding: 15px 50px; /* Внутренние отступы */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Курсор при наведении */
+    font-family: 'Montserrat', sans-serif; /* Шрифт для кнопки */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+button:hover {
+    background-color: #0056b3; /* Цвет кнопки при наведении */
+}
+
+/* Стили для вывода программы тренировок */
+#workoutProgram {
+    background-color: #f8f9fa; /* Светло-серый фон */
+    border: 1px solid #ccc; /* Рамка */
+    border-radius: 5px; /* Скругленные углы */
+    padding: 15px; /* Внутренние отступы */
+    font-family: 'Montserrat', sans-serif; /* Шрифт */
+    color: #333; /* Цвет текста */
+    margin-top: 10px; /* Отступ сверху */
+    width: 80%; /* Поле занимает 80% ширины контейнера */
+    max-width: 100%; /* Максимальная ширина 100% */
+    box-sizing: border-box; /* Учитываем отступы и рамки в ширине */
+}
+
+footer {
+    background-color: #111111;
+    color: #fefefe;
+    text-align: center;
+    padding: 10px 0;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Ширина скроллбара */
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Цвет фона трека скроллбара */
+    border-radius: 10px; /* Закругление углов */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #11a4bc; /* Цвет бегунка */
+    border-radius: 10px; /* Закругление углов бегунка */
+    border: 3px solid #1e1e1e; /* Пространство вокруг бегунка для эффекта */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0e99a5; /* Цвет при наведении */
+}
+
+* {
+    scrollbar-width: thin; /* Тонкий скроллбар */
+    scrollbar-color: #11a4bc #1e1e1e; /* Цвет бегунка и трека */
+}

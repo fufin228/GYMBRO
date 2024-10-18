@@ -1,0 +1,243 @@
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Меняем направление навигации на вертикальное */
+        align-items: flex-start; /* Выровнять элементы по левому краю */
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .text {
+        font-size: 40px; /* Уменьшаем размер шрифта для текста */
+    }
+
+    .btn {
+        padding: 15px 50px; /* Уменьшаем размер кнопок */
+    }
+
+    .container {
+        flex-direction: column; /* Вертикальное расположение карточек */
+    }
+
+    .call-to-action {
+        flex-direction: column; /* Вертикальное расположение колонок */
+        text-align: center; /* Центрирование текста на мобильных устройствах */
+        padding: 10px;
+    }
+
+    .call-to-action h2 {
+        font-size: 24px; /* Уменьшаем размер заголовка */
+    }
+
+    .call-to-action .cta-btn {
+        margin-top: 20px; /* Меньший отступ для кнопки */
+    }
+
+    footer {
+        font-size: 14px; /* Уменьшаем размер текста футера */
+    }
+}
+/* Для экранов до 480px (очень маленькие экраны) */
+@media (max-width: 480px) {
+    .text {
+        font-size: 30px; /* Еще меньше шрифт для мобильных */
+    }
+
+    .btn {
+        padding: 10px 30px; /* Уменьшаем кнопки еще больше */
+    }
+
+    .call-to-action h2 {
+        font-size: 20px; /* Заголовок еще меньше */
+    }
+
+    .call-to-action p {
+        font-size: 16px;
+    }
+}
+/* Общие стили для всего сайта */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #111111;
+}
+/* Навигация */
+nav {
+    background-color: #111111;
+    padding: 10px;
+    font: 1.2rem "Robot", sans-serif;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Панель навигации будет занимать всю ширину страницы */
+    background-color: #111111; /* Цвет фона */
+    z-index: 1000; /* Убедитесь, что панель всегда поверх других элементов */
+    padding: 10px;   
+}
+
+.nav-text h1 {
+    color: #f1ecec;
+    font: 1.2rem "Nitro", sans-serif;
+    margin: 0;    
+    font-size: 28px;
+}
+
+.colortext { 
+    color: rgb(17, 133, 148);
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    margin-right: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;  
+    position: relative;
+}
+
+.nav-links a:hover {    
+    /*text-decoration: underline;*/
+    color: #00fff0; /* Яркий неоновый цвет */
+    text-shadow: 0 0 20px #00fff0, 0 0 30px #00fff0, 0 0 40px #00fff0; /* Усиливаем свечение */
+}
+
+.nav-links a::after {
+    content: '';
+    bottom: -10px;
+    height: 0px;
+    width: 10px;
+    left: 50%;
+    position: absolute;
+    background-color: #01fefe;
+    border-radius: 50%;
+    transition: all 300ms;
+}
+
+.nav-links a:hover::after {
+    height: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text {
+    position: absolute; /* Абсолютное позиционирование для текста */
+    text-shadow: 0 20px 50px rgba(0, 0, 0, 1); /* Тень вокруг всей карточки */;
+    top: 20%; /* Сдвигаем текст вниз на 50% от высоты */
+    left: 50%; /* Сдвигаем текст вправо на 50% от ширины */
+    transform: translate(-50%, -50%); /* Центрируем текст по оси X и Y */
+    color: rgb(17, 133, 148);
+    padding: 10px 20px;
+    font: 1.2rem "Nitro", sans-serif;
+    text-align: center; /* Центрируем текст внутри блока */
+    font-size: 40px;
+    opacity: 0.8.5; /* Делаем текст немного прозрачным */
+}
+
+.breadcrumb {
+    font-family: 'Agdasima', sans-serif; /* Можно изменить шрифт на любой другой */
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center; /* Центрирование текста */
+    margin-top: 40px; /* Отступ сверху для смещения вниз */
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #ffffff; /* Цвет ссылок */
+    font-weight: 500;
+}
+
+
+.breadcrumb a:hover {
+    color: #00fff0; /* Яркий неоновый цвет */
+    text-shadow: 0 0 20px #00fff0, 0 0 30px #00fff0, 0 0 40px #00fff0; /* Усиливаем свечение */
+    
+}
+
+
+
+.container {
+    width: 70%;
+    height: 1050px;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #1b1b1b;
+    margin-top: 200px; /* Можно менять значение, чтобы регулировать отступ */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.6); /* Яркое белое неоновое свечение */
+    margin-bottom: 70px;
+}
+
+.extra-content-text {
+    color: #f1ecec;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Убедитесь, что все содержимое выровнено по левому краю */
+    margin: 0 20px; 
+    font-size: 24px;
+    font-family: 'Agdasima', sans-serif;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Межстрочный интервал для абзацев */
+    word-wrap: break-word; /* Позволяет переносу слов на новую строку */
+}
+
+.extra-content-text h1 {
+    color: #17A2B8;
+    margin: 0; /* Удаляем отступы */
+    padding: 0; /* Удаляем отступы */
+    font-size: 24px;
+    font-family: 'Agdasima', sans-serif;
+    margin-bottom: 10px; /* Меньший отступ между заголовком и текстом */
+    line-height: 1.2; /* Можно уменьшить межстрочный интервал для заголовка */
+}
+
+footer {
+    background-color: #111111;
+    color: #fefefe;
+    text-align: center;
+    padding: 10px 0;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Ширина скроллбара */
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Цвет фона трека скроллбара */
+    border-radius: 10px; /* Закругление углов */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #11a4bc; /* Цвет бегунка */
+    border-radius: 10px; /* Закругление углов бегунка */
+    border: 3px solid #1e1e1e; /* Пространство вокруг бегунка для эффекта */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0e99a5; /* Цвет при наведении */
+}
+
+* {
+    scrollbar-width: thin; /* Тонкий скроллбар */
+    scrollbar-color: #11a4bc #1e1e1e; /* Цвет бегунка и трека */
+}

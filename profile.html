@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Bro - Profile</title>
+    <link href="font.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bebas+Neue&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="icon" href="jpg/favicon.PNG">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-text">
+                <div>
+                    <h1>
+                        <a href="home.html" style="color: #f1ecec; text-decoration: none;">
+                        GYM<span class="colortext"> BRO</span>
+                        </a>
+                    </h1>
+                </div> 
+            </ul>
+            <ul class="nav-links"> 
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="programs.html">PROGRAMS</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                
+                <li><a href="profile.html">PROFILE</a></li>   
+            </ul>
+        </nav>
+    </header>
+    <div class="contt">
+        
+    <div class="container">
+        
+        <span class="circle-image">
+            <img id="profileImage" src="jpg/IMG.JPEG" alt="Profile Image" />
+            <input type="file" id="imageUpload" accept="image/*" style="display: none;" /> <!-- Скрытое поле для загрузки изображения -->
+            <label for="imageUpload" class="upload-button">Change Photo</label>
+        </span>
+        
+            <button id="saveButton">Save</button> <!-- Кнопка для сохранения информации -->
+            <div class="textikk">
+                <h1>PROFILE</h1>
+                <ul class="sex-image">
+                    <img src="jpg/favicon.PNG">
+                    </ul>
+            </div>
+           
+           <div class="cont">
+            <div class="column">
+                <label for="nickname">Your nickname:</label>
+                <input type="text" id="nickname" placeholder="user@123456789" required>
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Your age" required>
+                <label for="height">Height:</label>
+                <input type="number" id="height" placeholder="Your height in cm" required>        
+                <label for="weight">Weight:</label>
+                <input type="number" id="weight" placeholder="Your weight in kg" required>
+
+            </div>
+           </div>
+     
+        
+        
+    </div>
+    <div class="contain"
+    <div id="newInputsContainer">
+        <div class="input-container">
+            <label for="deadlift">Deadlift (0-100):</label>
+            <input type="number" id="deadlift" min="0" max="100" placeholder="0-100" required>
+            <div class="progress-bar">
+                <div class="fill" id="fillDeadlift"></div>
+            </div>
+        </div>
+        <div class="input-container">
+            <label for="benchPress">Bench press (0-80):</label>
+            <input type="number" id="benchPress" min="0" max="80" placeholder="0-80" required>
+            <div class="progress-bar">
+                <div class="fill" id="fillBenchPress"></div>
+            </div>
+        </div>
+        <div class="input-container">
+            <label for="barbellSquat">Barbell squat (0-110):</label>
+            <input type="number" id="barbellSquat" min="0" max="110" placeholder="0-110" required>
+            <div class="progress-bar">
+                <div class="fill" id="fillBarbellSquat"></div>
+            </div>
+        </div>
+        <div class="input-container">
+            <label for="daysGym">Days in the gym (0-30):</label>
+            <input type="number" id="daysGym" min="0" max="30" placeholder="0-30" required>
+            <div class="progress-bar">
+                <div class="fill" id="fillDaysGym"></div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<footer>
+    <p>&copy; 2024 Your Gym Bro. All rights reserved.</p>
+</footer>
+<script src="scriptprofile.js"></script>
+</body>
+</html>
