@@ -189,7 +189,7 @@ nav {
 } 
 .contain {
     width: 90%;
-    height: 330px;
+    height: 400px;
     display: flex; /* Используем Flexbox */
     justify-content: space-between; /* Распределяем пространство между колонками */
     flex-wrap: wrap; /* Позволяем элементам переноситься на новую строку при необходимости */

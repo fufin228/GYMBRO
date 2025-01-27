@@ -186,7 +186,7 @@ nav {
 
 .contein {
     width: 40%; /* Ширина каждого блока, чтобы они умещались по горизонтали */
-    height: 700px;
+    height: 800px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -284,7 +284,7 @@ button:hover {
 
 .conteiner {
     width: 40%; /* Ширина каждого блока, чтобы они умещались по горизонтали */
-    height: 700px;
+    height: 800px;
     color: #000000;
     font-family: 'Montserrat', sans-serif; /* Шрифт для заголовка */
     margin-left: auto;
