@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Gym Bro - Programs</title>
-    <link href="font.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bebas+Neue&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="programs.css">
-    <link rel="icon" href="jpg/favicon.PNG">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="font.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bebas+Neue&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="programs.css"/>
+    <link rel="icon" href="jpg/favicon.PNG"/>
 </head>
 <body>
     <header>
@@ -21,7 +20,7 @@
                 <div>
                     <h1>
                         <a href="home.html" style="color: #f1ecec; text-decoration: none;">
-                        GYM<span class="colortext"> BRO</span>
+                            GYM<span class="colortext"> BRO</span>
                         </a>
                     </h1>
                 </div> 
@@ -40,7 +39,7 @@
     </div>
 
     <ul class="section-image">
-        <img src="jpg/favicon.PNG">
+        <img src="jpg/favicon.PNG" alt="Gym Bro Logo"/>
     </ul>
 
     <section>
@@ -50,44 +49,48 @@
                     <form id="programForm">
                         <div class="column">
                             <label for="goal">Workout Goal:</label>
-                            <select id="goal">
+                            <select id="goal" name="goal">
                                 <option value="Weight Loss">Weight Loss</option>
                                 <option value="Muscle Gain">Muscle Gain</option>
                                 <option value="Endurance Improvement">Endurance Improvement</option>
                             </select>
-                
+
                             <label for="level">Fitness Level:</label>
-                            <select id="level">
+                            <select id="level" name="level">
                                 <option value="Beginner">Beginner</option>
                                 <option value="Intermediate">Intermediate</option>
                                 <option value="Advanced">Advanced</option>
                             </select>
-                
+
                             <label for="height">Height:</label>
-                            <input type="number" id="height" placeholder="Your height in cm" required>
-                
+                            <input type="number" id="height" name="height" placeholder="Your height in cm" required>
+
                             <label for="weight">Weight:</label>
-                            <input type="number" id="weight" placeholder="Your weight in kg" required>
+                            <input type="number" id="weight" name="weight" placeholder="Your weight in kg" required>
                         </div>
-                
+
                         <div class="column">
                             <label for="age">Age:</label>
-                            <input type="number" id="age" placeholder="Your age" required>
-                
+                            <input type="number" id="age" name="age" placeholder="Your age" required>
+
                             <label for="gender">Gender:</label>
-                            <select id="gender">
+                            <select id="gender" name="gender">
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
-                            
-                            <label for="equipment">Available Equipment:</label>
-                            <input type="text" id="equipment" placeholder="For example, dumbbells, barbells" required>
-                
+
+                            <label for="place">Location for Workouts:</label>
+                            <select id="place">
+                                <option value="gym">Gym</option>
+                                <option value="home">Home</option>
+                                <option value="bars">Bars</option>
+                            </select>
+
                             <label for="time">Time for Workouts:</label>
-                            <input type="text" id="time" placeholder="For example, 3 times a week" required>
+                            <input type="text" id="time" name="time" placeholder="For example, 3 times a week" required>
 
                             <label for="numberOfExercises">Number of exercises:</label>
-                            <input type="number" id="numberOfExercises" name="numberOfExercises" min="1" value="20">
+                            <input type="number" id="numberOfExercises" name="numberOfExercises" min="1" value="6">
                         </div>  
                     </form>
                 </div>      

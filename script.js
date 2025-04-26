@@ -1,67 +1,209 @@
-function generateRepsAndSets(goal, fitnessLevel) {
-    let sets, reps;
+document.getElementById('submitButton').addEventListener('click', generateWorkout);
 
-    if (goal === 'сила') {
-        sets = fitnessLevel === 'начинающий' ? 3 : 5;
-        reps = fitnessLevel === 'начинающий' ? 6 : 4;
-    } else if (goal === 'кардио') {
-        sets = 3;
-        reps = fitnessLevel === 'начинающий' ? 15 : 20;
-    } else if (goal === 'выносливость') {
-        sets = fitnessLevel === 'начинающий' ? 3 : 4;
-        reps = fitnessLevel === 'начинающий' ? 12 : 15;
-    } else {
-        sets = 3;
-        reps = 10; 
+function generateWorkout() {
+    const goal = document.getElementById('goal').value;
+    const level = document.getElementById('level').value;
+    const height = document.getElementById('height').value;
+    const weight = document.getElementById('weight').value;
+    const age = document.getElementById('age').value;
+    const gender = document.getElementById('gender').value;
+    const time = document.getElementById('time').value;
+    const place = document.getElementById('place').value;
+    const numberOfExercises = parseInt(document.getElementById('numberOfExercises').value);
+
+    if (!goal || !level || !height || !weight || !age || !gender || !time || !place || !numberOfExercises) {
+        alert("Please fill out all fields!");
+        return;
     }
 
-    return { sets, reps };
-}
+    const days = parseInt(time);
 
-async function getWorkoutProgram() {
-    const inputData = {
-        goals: document.getElementById('goal').value.toLowerCase(),
-        fitnessLevel: document.getElementById('level').value.toLowerCase(),
-        height: document.getElementById('height').value,
-        weight: document.getElementById('weight').value,
-        age: document.getElementById('age').value,
-        gender: document.getElementById('gender').value,
-        equipment: document.getElementById('equipment').value.toLowerCase(),
-        time: document.getElementById('time').value
+    const exercises = {
+        "Weight Loss": {
+            "Beginner": [
+                "Walking",
+                "Bodyweight Squats",
+                "Push-Ups",
+                "Lunges",
+                "Mountain Climbers",
+                "Jumping Jacks",
+                "Crunches",
+                "Plank",
+                "High Knees",
+                "Step-Ups",
+                "Squat Jumps",
+                "Jump Rope",
+                "Glute Bridges",
+                "Leg Raises"
+            ],
+            "Intermediate": [
+                "Burpees",
+                "Jump Squats",
+                "High Knees",
+                "Push-Ups",
+                "Bodyweight Rows",
+                "Plank",
+                "Lateral Raises with Dumbbells",
+                "Leg Raises",
+                "Kettlebell Swings",
+                "Mountain Climbers with Twist",
+                "Alternating Lunges",
+                "Skater Jumps",
+                "Box Jumps",
+                "Jumping Lunges"
+            ],
+            "Advanced": [
+                "Sprints",
+                "Jumping Lunges",
+                "Box Jumps",
+                "Burpees with Push-Up",
+                "Mountain Climbers with Twist",
+                "Plank to Push-Up",
+                "Jump Rope",
+                "Tuck Jumps",
+                "Medicine Ball Slams",
+                "Kettlebell Snatches",
+                "Battle Ropes",
+                "Barbell Thrusters",
+                "Wall Balls",
+                "Clapping Push-Ups"
+            ]
+        },
+        "Muscle Gain": {
+            "Beginner": [
+                "Bodyweight Squats",
+                "Push-Ups",
+                "Dumbbell Rows",
+                "Lunges",
+                "Tricep Dips",
+                "Glute Bridges",
+                "Plank",
+                "Superman Hold",
+                "Dumbbell Chest Press",
+                "Dumbbell Shoulder Press",
+                "Bicep Curls with Dumbbells",
+                "Tricep Kickbacks"
+            ],
+            "Intermediate": [
+                "Deadlifts",
+                "Barbell Squats",
+                "Barbell Bench Press",
+                "Pull-Ups",
+                "Overhead Dumbbell Press",
+                "Barbell Rows",
+                "Leg Press",
+                "Incline Bench Press",
+                "Dumbbell Lateral Raises",
+                "Bulgarian Split Squats",
+                "Barbell Bicep Curls",
+                "Skull Crushers",
+                "Barbell Hip Thrusts",
+                "Hammer Curls"
+            ],
+            "Advanced": [
+                "Deadlifts (Heavy)",
+                "Barbell Squats (Heavy)",
+                "Muscle-Ups",
+                "Weighted Pull-Ups",
+                "Incline Bench Press",
+                "Barbell Lunges",
+                "Tire Flips",
+                "Barbell Shrugs",
+                "Snatch",
+                "Clean and Jerk",
+                "Kettlebell Swings (Heavy)",
+                "Overhead Squats",
+                "Pull-Up with Weighted Vest",
+                "Barbell Clean"
+            ]
+        },
+        "Endurance Improvement": {
+            "Beginner": [
+                "Jogging",
+                "Cycling",
+                "Walking Lunges",
+                "Push-Ups",
+                "Plank",
+                "Jump Rope",
+                "Step-Ups",
+                "Squat Jumps",
+                "Burpees",
+                "Russian Twists",
+                "Mountain Climbers",
+                "Side Planks",
+                "Glute Kickbacks",
+                "Triceps Dips"
+            ],
+            "Intermediate": [
+                "Running Intervals",
+                "Burpees",
+                "Mountain Climbers",
+                "Jumping Jacks",
+                "Kettlebell Swings",
+                "Push-Ups",
+                "Plank",
+                "Box Jumps",
+                "Knee Tuck Jumps",
+                "Alternating Leg Raises",
+                "Dumbbell Snatches",
+                "Jump Rope",
+                "Step-Ups with Weights",
+                "Flutter Kicks"
+            ],
+            "Advanced": [
+                "HIIT Circuit",
+                "Sprints with Burpees",
+                "Plyometric Jumps",
+                "Pull-Ups",
+                "Push-Ups with Clap",
+                "Mountain Climbers with Twist",
+                "Jump Rope",
+                "Jumping Lunges",
+                "Wall Climbers",
+                "Kettlebell Thrusters",
+                "Tuck Jumps",
+                "Lateral Box Jumps",
+                "Burpee Box Jumps",
+                "Long Jump Sprints"
+            ]
+        }
     };
 
-    const numberOfExercises = parseInt(document.getElementById('numberOfExercises').value) || 5;
+    let selectedExercises = [];
 
-    try {
-        const response = await fetch('https://wger.de/api/v2/exercise/?language=2', {
-            method: 'GET',
-            headers: {
-                'Authorization': 'Token 35e79fb328590e9363fc67f12f080c547d8c5f9c', // Замените на ваш API-токен
-                'Content-Type': 'application/json'
-            }
-        });
+    // Выбираем упражнения в зависимости от цели и уровня
+    if (goal === "Weight Loss") {
+        selectedExercises = exercises["Weight Loss"][level];
+    } else if (goal === "Muscle Gain") {
+        selectedExercises = exercises["Muscle Gain"][level];
+    } else if (goal === "Endurance Improvement") {
+        selectedExercises = exercises["Endurance Improvement"][level];
+    } else {
+        alert("Invalid goal selected!");
+        return;
+    }
 
-        if (!response.ok) {
-            throw new Error(`Ошибка: ${response.status}`);
+    let workoutPlan = "";
+
+    // Генерация плана на выбранное количество дней
+    for (let day = 1; day <= days; day++) {
+        workoutPlan += `<h3>Day ${day}</h3><ul>`;
+        let dayExercises = [];
+
+        for (let i = 0; i < numberOfExercises; i++) {
+            const randomExercise = selectedExercises[Math.floor(Math.random() * selectedExercises.length)];
+            dayExercises.push(randomExercise);
         }
 
-        const data = await response.json();
+        // Убираем дублирующиеся упражнения
+        const uniqueExercises = [...new Set(dayExercises)].slice(0, numberOfExercises);
 
-        const filteredExercises = data.results.slice(0, numberOfExercises).map(exercise => {
-            const { sets, reps } = generateRepsAndSets(inputData.goals, inputData.fitnessLevel);
-
-            return `- ${exercise.name}: ${sets} подхода(-ов) по ${reps} повторений`;
+        uniqueExercises.forEach(exercise => {
+            workoutPlan += `<li>${exercise} — 4 sets of 8–12 reps</li>`;
         });
 
-        const workoutProgram = filteredExercises.join('\n') || 'API вернуло пустой список упражнений.';
-        document.getElementById('workoutProgram').innerText = workoutProgram;
-
-        localStorage.setItem('workoutProgram', workoutProgram);
-
-    } catch (error) {
-        console.error('Ошибка при получении программы:', error);
-        document.getElementById('workoutProgram').innerText = 'Произошла ошибка при получении программы тренировок.';
+        workoutPlan += `</ul>`;
     }
-}
 
-document.getElementById('submitButton').addEventListener('click', getWorkoutProgram);
+    document.getElementById('workoutProgram').innerHTML = workoutPlan;
+}

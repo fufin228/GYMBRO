@@ -347,16 +347,15 @@ button:hover {
 
 /* Стили для вывода программы тренировок */
 #workoutProgram {
-    background-color: #f8f9fa; /* Светло-серый фон */
-    border: 1px solid #ccc; /* Рамка */
-    border-radius: 5px; /* Скругленные углы */
-    padding: 15px; /* Внутренние отступы */
-    font-family: 'Montserrat', sans-serif; /* Шрифт */
-    color: #333; /* Цвет текста */
-    margin-top: 10px; /* Отступ сверху */
-    width: 80%; /* Поле занимает 80% ширины контейнера */
-    max-width: 100%; /* Максимальная ширина 100% */
-    box-sizing: border-box; /* Учитываем отступы и рамки в ширине */
+    max-height: 3300px; /* или больше, по вкусу */
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: #1f1f1f; /* можно свой цвет */
+    border-radius: 10px;
+    border: 1px solid #555;
+    color: #f0f0f0;
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
 footer {
