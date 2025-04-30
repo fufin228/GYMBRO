@@ -206,4 +206,20 @@ function generateWorkout() {
     }
 
     document.getElementById('workoutProgram').innerHTML = workoutPlan;
+
+
+const programData = {
+    goal,
+    level,
+    height,
+    weight,
+    age,
+    gender,
+    time,
+    place,
+    numberOfExercises,
+    workoutProgram: workoutPlan
+};
+
+
 }

@@ -160,8 +160,9 @@ nav {
     width: 100px;  /* Установите нужную ширину */
     height: auto; /* Высота будет пропорциональна */
     margin-top: 200px;
-    display: flex;
-    margin-left: 705px;    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
     margin-bottom: -320px;
     z-index: 1; /* Контейнер уходит "под" первый контейнер */
 

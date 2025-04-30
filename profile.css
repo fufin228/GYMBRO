@@ -58,14 +58,15 @@
     }
 }
 
-/* Общие стили для всего сайта */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #111111;
+    background-color: #f5f5f5;
+    color: #333;
 }
+
 
 /* Навигация */
 nav {
@@ -143,174 +144,95 @@ nav {
     transform: translateX(-50%);
 }
 
-.contt {
-    width: 80%;
-    height: 1000px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-    border-radius: 30px;
-    padding: 20px;
-    background-color: #1a1a1a;
-    box-shadow: 0 0 20px rgb(116, 116, 116), 0 0 40px rgba(128, 128, 128, 0.8), 0 0 60px rgba(83, 83, 83, 0.6); /* Яркое белое неоновое свечение */
-
-    margin-top: 150px;
-    z-index: 0;
-    box-shadow: #111111;
-
-}
 .container {
-    width: 45%;
-    height: 400px;
-    margin: 50px;
-    border-radius: 10pc 30px 30px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #cfcfcf;
-    box-shadow: #111111;
-    box-shadow: 0 0 20px rgb(116, 116, 116), 0 0 40px rgba(128, 128, 128, 0.8), 0 0 60px rgba(83, 83, 83, 0.6); /* Яркое белое неоновое свечение */
-    margin-bottom: 10px;
-    margin-top: 50px;
 }
 
+.profile-section, .workouts-section {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-.circle-image{
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+.workouts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.workout-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #3498db;
+}
+
+.btn {
     display: inline-block;
-    border-radius: 50%;
-    margin: 30px;
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
-    box-shadow: 0 0 20px rgb(0, 0, 0), 0 0 40px rgba(0, 0, 0, 0.8), 0 0 60px rgba(0, 0, 0, 0.6); /* Яркое белое неоновое свечение */
-
-}
-.circle-image img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-} 
-.contain {
-    width: 90%;
-    height: 400px;
-    display: flex; /* Используем Flexbox */
-    justify-content: space-between; /* Распределяем пространство между колонками */
-    flex-wrap: wrap; /* Позволяем элементам переноситься на новую строку при необходимости */
-
-    margin: 50px;
-    border-radius: 30px 30px 30px 30px;
-    padding: 20px;
-    background-color: #bebebe;
-    box-shadow: 0 0 20px rgb(116, 116, 116), 0 0 40px rgba(128, 128, 128, 0.8), 0 0 60px rgba(83, 83, 83, 0.6); /* Яркое белое неоновое свечение */
-    margin-top: 40px;
+    background: #3498db;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 10px;
 }
 
-.cont {
-    width: 45%;
-    height: 330px;
-    margin: 265px;
-    border-radius: 30px 30px 30px 30px;
-    padding: 20px;
-    background-color: #bebebe;
-    box-shadow: 0 0 20px rgb(116, 116, 116), 0 0 40px rgba(128, 128, 128, 0.8), 0 0 60px rgba(83, 83, 83, 0.6); /* Яркое белое неоновое свечение */
-    margin-top: 130px;
+.btn:hover {
+    background: #2980b9;
 }
 
-
-
-.column {
-    flex: 1 1 50%; /* Каждая колонка занимает 50% ширины */
-    padding: 13px; /* Отступы внутри колонки */
+.btn.cancel {
+    background: #95a5a6;
 }
 
-label {
+.btn.cancel:hover {
+    background: #7f8c8d;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert.error {
+    background: #ffebee;
+    color: #c62828;
+    border-left: 4px solid #c62828;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     font-weight: bold;
-    font-size: 16px;
 }
 
-input[type="number"],
-input[type="text"],
-select,
-textarea {
+.form-group input, .form-group select, .form-group textarea {
     width: 100%;
     padding: 8px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     box-sizing: border-box;
-    transition: border-color 0.8s;
-    font-size: 16px;
 }
 
-input[type="number"]:focus,
-input[type="text"]:focus,
-select:focus,
-textarea:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-button {
-    background-color: #007BFF;/* Цвет кнопки */
-    margin-right: 450px;
-    margin-left: 20px;
-    margin-top: 30px;
-    color: #ffffff; /* Цвет текста на кнопке */
-    border: none; /* Без рамки */
-    padding: 20px 90px; /* Внутренние отступы */
-    border-radius: 10px; /* Скругленные углы */
-    cursor: pointer; /* Курсор при наведении */
-    font-family: 'Montserrat', sans-serif; /* Шрифт для кнопки */
-    transition: background-color 0.3s; /* Плавный переход цвета */
-}
-
-button:hover {
-    background-color: #0056b3; /* Цвет кнопки при наведении */
-}
-
-.textikk {
-    font-family: 'Nitro', sans-serif; /* Шрифт для кнопки */
-    font-size: 35px;
-
-    color: rgb(17, 133, 148); /* Цвет текста на кнопке */
-    margin-left: 710px;
-    margin-right: 150px;
-    margin-top: -400px;
-    margin-bottom: 0;
-
-}
-
-
-.sex-image img {
-    width: 100px;  /* Установите нужную ширину */
-    height: auto; /* Высота будет пропорциональна */
-    margin-top: 40px;
-    display: flex;
-    margin-left: 120px;    
-    margin-bottom: -320px;
-    z-index: 1; /* Контейнер уходит "под" первый контейнер */
-
-}
-
-.input-container {
-
-    margin: 30px; /* Отступы вокруг контейнера */
-    width: 40%;
-}
-
-.progress-bar {
-    width: 100%; /* Ширина полосы прогресса */
-    background-color: #e0e0e0; /* Цвет фона полосы прогресса */
-    border-radius: 10px; /* Закругление углов */
-    height: 20px; /* Высота полосы прогресса */
-    margin-top: 10px; /* Отступ сверху для отделения от поля ввода */
-}
-
-.fill {
-    height: 100%; /* Высота заполненной части */
-    background-color: #007bff; /* Цвет заполненной части */
-    width: 0%; /* Начальная ширина заполненной части */
-    border-radius: 10px; /* Закругление углов заполненной части */
-    transition: width 0.3s ease; /* Плавный переход ширины */
+.program-data {
+    white-space: pre-line;
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
 }
 
 footer {
